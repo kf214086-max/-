@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超次元漫畫博覽會 - 2025 年度盛典</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; }
+        
+        /* 頂部漸層背景 */
+        .gradient-header {
+            background: linear-gradient(to right, #c7d2fe, #f3f4f6, #99f6e4);
+        }
+
+        /* 資訊方框的半透明毛玻璃效果 */
+        .info-box {
+            background-color: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* 自定義選取效果 */
+        .ticket-card input:checked + .card-content {
+            border-color: #d8b4fe;
+            background-color: #f5f3ff;
+        }
+
+        .chip-input input:checked + .chip-content {
+            background-color: #5d51bb;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <header class="gradient-header pt-20 pb-24 text-center px-4">
+        <div class="inline-block px-4 py-1 border border-white/50 rounded-full text-[10px] text-gray-500 mb-6 bg-white/20">
+            2025 年度盛典
+        </div>
+        <h1 class="text-4xl font-medium tracking-[0.25em] text-gray-800 mb-6">超次元漫畫博覽會</h1>
+        <p class="max-w-2xl mx-auto text-gray-600 text-sm leading-loose mb-12">
+            集結頂尖插畫家、潮流插畫、ACG 周邊，帶你突破次元壁，感受最狂熱<br class="hidden md:block">的創作能量！
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+            <div class="info-box p-5 w-40 rounded-sm">
+                <p class="text-[10px] text-gray-400 mb-1">日期</p>
+                <p class="text-xs font-bold whitespace-nowrap">2025 / 08 / 16 - 17</p>
+            </div>
+            <div class="info-box p-5 w-40 rounded-sm">
+                <p class="text-[10px] text-gray-400 mb-1">地點</p>
+                <p class="text-xs font-bold">台北世貿一館</p>
+            </div>
+            <div class="info-box p-5 w-40 rounded-sm">
+                <p class="text-[10px] text-gray-400 mb-1">參展規模</p>
+                <p class="text-xs font-bold">200+ 攤位</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-16">
+        
+        <section class="mb-24">
+            <h2 class="text-lg font-bold mb-12 tracking-wider">活動亮點</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl mb-4 opacity-80">🎨</span>
+                    <h3 class="font-bold text-sm mb-2">原創展覽</h3>
+                    <p class="text-[10px] text-gray-500">50 位台灣頂尖插畫家聯合展出</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl mb-4 opacity-80">🛍️</span>
+                    <h3 class="font-bold text-sm mb-2">周邊市集</h3>
+                    <p class="text-[10px] text-gray-400">限定商品、聯名款首發</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl mb-4 opacity-80">🎤</span>
+                    <h3 class="font-bold text-sm mb-2">主題講座</h3>
+                    <p class="text-[10px] text-gray-400">創作分享、簽名會、互動體驗</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl mb-4 opacity-80">🏆</span>
+                    <h3 class="font-bold text-sm mb-2">新人競賽</h3>
+                    <p class="text-[10px] text-gray-400">投稿比賽、現場頒獎典禮</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-4xl mx-auto">
+            <h2 class="text-lg font-bold mb-8 tracking-wider">立即報名入場</h2>
+            
+            <form action="https://formspree.io/f/myklddjp" method="POST" class="space-y-10">
+                
+                <div>
+                    <p class="text-sm font-bold mb-4">選擇票種</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <label class="ticket-card relative cursor-pointer">
+                            <input type="radio" name="票種" value="單日票" class="hidden" checked>
+                            <div class="card-content border border-gray-200 p-6 rounded transition-all">
+                                <p class="font-bold text-sm mb-1">單日票</p>
+                                <p class="text-blue-700 font-bold mb-2">NT$ 350</p>
+                                <p class="text-[10px] text-gray-400">任選一天入場，含電子票券</p>
+                            </div>
+                        </label>
+                        <label class="ticket-card relative cursor-pointer">
+                            <input type="radio" name="票種" value="兩日票" class="hidden">
+                            <div class="card-content border border-gray-200 p-6 rounded transition-all hover:bg-gray-50">
+                                <p class="font-bold text-sm mb-1">兩日票</p>
+                                <p class="text-blue-700 font-bold mb-2">NT$ 600</p>
+                                <p class="text-[10px] text-gray-400">兩天不限次入場 + 限定紀念品</p>
+                            </div>
+                        </label>
+                        <label class="ticket-card relative cursor-pointer">
+                            <input type="radio" name="票種" value="學生票" class="hidden">
+                            <div class="card-content border border-gray-200 p-6 rounded transition-all hover:bg-gray-50">
+                                <p class="font-bold text-sm mb-1">學生票</p>
+                                <p class="text-blue-700 font-bold mb-2">NT$ 250</p>
+                                <p class="text-[10px] text-gray-400">憑學生證入場 (單日)</p>
+                            </div>
+                        </label>
+                        <label class="ticket-card relative cursor-pointer">
+                            <input type="radio" name="票種" value="VIP票" class="hidden">
+                            <div class="card-content border border-gray-200 p-6 rounded transition-all hover:bg-gray-50">
+                                <p class="font-bold text-sm mb-1">VIP 票</p>
+                                <p class="text-blue-700 font-bold mb-2">NT$ 1,200</p>
+                                <p class="text-[10px] text-gray-400">優先入場 + 專屬禮包 + 講座席位</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-[10px] font-bold mb-2">姓名 *</label>
+                        <input type="text" name="姓名" required placeholder="請輸入真實姓名" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-purple-500 text-sm placeholder:text-gray-300">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold mb-2">電話 *</label>
+                        <input type="tel" name="電話" required placeholder="09XX-XXX-XXX" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-purple-500 text-sm placeholder:text-gray-300">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-[10px] font-bold mb-2">電子郵件 *</label>
+                        <input type="email" name="email" required placeholder="your@email.com" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-purple-500 text-sm placeholder:text-gray-300">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-[10px] font-bold mb-2">入場日期 *</label>
+                    <div class="relative">
+                        <select name="入場日期" required class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-purple-500 text-sm appearance-none bg-transparent">
+                            <option value="" disabled selected>請選擇日期</option>
+                            <option value="0816">2025 / 08 / 16 (六)</option>
+                            <option value="0817">2025 / 08 / 17 (日)</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
+                            <svg class="fill-current h-4 w-4" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-[10px] font-bold mb-3">最感興趣的活動 (可複選)</label>
+                    <div class="flex flex-wrap gap-2">
+                        <label class="chip-input cursor-pointer">
+                            <input type="checkbox" name="興趣" value="原創展覽" class="hidden">
+                            <div class="chip-content px-4 py-1.5 rounded-full bg-purple-50 text-purple-600 text-[10px] border border-purple-100 transition-all">原創展覽</div>
+                        </label>
+                        <label class="chip-input cursor-pointer">
+                            <input type="checkbox" name="興趣" value="周邊市集" class="hidden">
+                            <div class="chip-content px-4 py-1.5 rounded-full bg-purple-50 text-purple-600 text-[10px] border border-purple-100 transition-all">周邊市集</div>
+                        </label>
+                        <label class="chip-input cursor-pointer">
+                            <input type="checkbox" name="興趣" value="作者簽名會" class="hidden">
+                            <div class="chip-content px-4 py-1.5 rounded-full bg-purple-50 text-purple-600 text-[10px] border border-purple-100 transition-all">作者簽名會</div>
+                        </label>
+                        <label class="chip-input cursor-pointer">
+                            <input type="checkbox" name="興趣" value="創作講座" class="hidden">
+                            <div class="chip-content px-4 py-1.5 rounded-full bg-purple-50 text-purple-600 text-[10px] border border-purple-100 transition-all">創作講座</div>
+                        </label>
+                        <label class="chip-input cursor-pointer">
+                            <input type="checkbox" name="興趣" value="新人競賽" class="hidden">
+                            <div class="chip-content px-4 py-1.5 rounded-full bg-purple-50 text-purple-600 text-[10px] border border-purple-100 transition-all">新人競賽</div>
+                        </label>
+                        <label class="chip-input cursor-pointer">
+                            <input type="checkbox" name="興趣" value="Cosplay展區" class="hidden">
+                            <div class="chip-content px-4 py-1.5 rounded-full bg-purple-50 text-purple-600 text-[10px] border border-purple-100 transition-all">cosplay 展區</div>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-[10px] font-bold mb-2">備註 (選填)</label>
+                    <textarea name="備註" placeholder="如有特殊需求或想說的話，歡迎填寫" rows="3" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-purple-500 text-sm resize-none placeholder:text-gray-300"></textarea>
+                </div>
+
+                <div class="pt-8 text-center">
+                    <button type="submit" class="w-full bg-[#5d51bb] text-white py-4 rounded hover:bg-[#4a419e] transition-all text-sm font-bold shadow-lg shadow-indigo-100">
+                        立即完成報名 →
+                    </button>
+                    <p class="text-[10px] text-gray-400 mt-4 tracking-tighter">
+                        報名完成後將寄送確認信至您的電子郵件，請確認信箱正確。
+                    </p>
+                </div>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
